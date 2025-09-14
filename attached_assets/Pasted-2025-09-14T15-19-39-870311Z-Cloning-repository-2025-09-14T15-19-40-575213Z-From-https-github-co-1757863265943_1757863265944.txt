@@ -1,0 +1,49 @@
+2025-09-14T15:19:39.870311Z	Cloning repository...
+2025-09-14T15:19:40.575213Z	From https://github.com/hennesbam-design/stocktake-studio
+2025-09-14T15:19:40.575818Z	 * branch            7079be85bb9ca2cea9eb9266c70bab003a7272db -> FETCH_HEAD
+2025-09-14T15:19:40.575978Z	
+2025-09-14T15:19:40.613919Z	HEAD is now at 7079be8 Initial Stocktake Studio code
+2025-09-14T15:19:40.614601Z	
+2025-09-14T15:19:40.699535Z	
+2025-09-14T15:19:40.700058Z	Using v2 root directory strategy
+2025-09-14T15:19:40.72405Z	Success: Finished cloning repository files
+2025-09-14T15:19:42.520013Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-09-14T15:19:42.520728Z	
+2025-09-14T15:19:43.638464Z	No wrangler.toml file found. Continuing.
+2025-09-14T15:19:43.706526Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-09-14T15:19:43.707074Z	Installing project dependencies: npm clean-install --progress=false
+2025-09-14T15:19:46.570997Z	npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-09-14T15:19:46.898285Z	npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-09-14T15:19:47.139537Z	npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-09-14T15:19:51.078358Z	
+2025-09-14T15:19:51.078579Z	added 437 packages, and audited 438 packages in 7s
+2025-09-14T15:19:51.078792Z	
+2025-09-14T15:19:51.07894Z	54 packages are looking for funding
+2025-09-14T15:19:51.079086Z	  run `npm fund` for details
+2025-09-14T15:19:51.08443Z	
+2025-09-14T15:19:51.084618Z	8 vulnerabilities (3 low, 3 moderate, 2 critical)
+2025-09-14T15:19:51.084747Z	
+2025-09-14T15:19:51.084865Z	To address issues that do not require attention, run:
+2025-09-14T15:19:51.085037Z	  npm audit fix
+2025-09-14T15:19:51.085147Z	
+2025-09-14T15:19:51.085323Z	To address all issues (including breaking changes), run:
+2025-09-14T15:19:51.085459Z	  npm audit fix --force
+2025-09-14T15:19:51.085541Z	
+2025-09-14T15:19:51.08561Z	Run `npm audit` for details.
+2025-09-14T15:19:51.115724Z	Executing user command: npx vite build
+2025-09-14T15:19:52.218498Z	npm warn exec The following package was not found and will be installed: vite@7.1.5
+2025-09-14T15:19:56.54299Z	[31mfailed to load config from /opt/buildhome/repo/vite.config.ts[39m
+2025-09-14T15:19:56.543285Z	[31merror during build:
+2025-09-14T15:19:56.543445Z	Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /opt/buildhome/repo/node_modules/.vite-temp/vite.config.ts.timestamp-1757863196539-b707950f69615.mjs
+2025-09-14T15:19:56.543583Z	    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:256:9)
+2025-09-14T15:19:56.544161Z	    at packageResolve (node:internal/modules/esm/resolve:768:81)
+2025-09-14T15:19:56.544391Z	    at moduleResolve (node:internal/modules/esm/resolve:854:18)
+2025-09-14T15:19:56.544499Z	    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+2025-09-14T15:19:56.544562Z	    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+2025-09-14T15:19:56.544705Z	    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+2025-09-14T15:19:56.544812Z	    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+2025-09-14T15:19:56.544955Z	    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+2025-09-14T15:19:56.545071Z	    at ModuleJob._link (node:internal/modules/esm/module_job:137:49)[39m
+2025-09-14T15:19:56.570979Z	Failed: Error while executing user command. Exited with error code: 1
+2025-09-14T15:19:56.582707Z	Failed: build command exited with code: 1
+2025-09-14T15:19:57.856786Z	Failed: error occurred while running build command

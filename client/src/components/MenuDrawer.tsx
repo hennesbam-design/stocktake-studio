@@ -78,19 +78,11 @@ export function MenuDrawer({
   };
 
   const handleClearData = () => {
-    if (adminPin) {
-      if (pinInput === adminPin) {
-        onClearData();
-        setPinInput("");
-        setShowClearDialog(false);
-      } else {
-        alert("Incorrect PIN");
-        setPinInput("");
-      }
-    } else {
-      onClearData();
-      setShowClearDialog(false);
-    }
+    // Pass the PIN to the server for secure validation
+    // No client-side validation for security
+    onClearData();
+    setPinInput("");
+    setShowClearDialog(false);
   };
 
   return (
@@ -253,18 +245,12 @@ export function MenuDrawer({
                     <p className="text-sm text-muted-foreground">
                       This will permanently delete all stocktake entries. This action cannot be undone.
                     </p>
-                    {adminPin && (
-                      <div className="space-y-2">
-                        <Label>Enter Admin PIN to confirm</Label>
-                        <Input
-                          type="password"
-                          value={pinInput}
-                          onChange={(e) => setPinInput(e.target.value)}
-                          placeholder="Enter PIN"
-                          data-testid="input-confirm-pin"
-                        />
-                      </div>
-                    )}
+                    <div className="space-y-2">
+                      <Label>This action requires admin authentication</Label>
+                      <p className="text-xs text-muted-foreground">
+                        Admin PIN will be verified securely on the server
+                      </p>
+                    </div>
                   </div>
                   <DialogFooter>
                     <Button

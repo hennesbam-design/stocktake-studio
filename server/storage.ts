@@ -60,6 +60,9 @@ export interface IStorage {
   getEntry(id: string): Promise<StocktakeEntry | undefined>;
   createEntry(entry: InsertStocktakeEntry): Promise<StocktakeEntry>;
   clearEntries(sessionId: string): Promise<boolean>;
+  
+  // Admin operations
+  clearAllData(): Promise<boolean>;
 }
 
 export class DbStorage implements IStorage {
@@ -327,6 +330,22 @@ export class DbStorage implements IStorage {
   async clearEntries(sessionId: string): Promise<boolean> {
     const result = await db.delete(stocktakeEntries).where(eq(stocktakeEntries.sessionId, sessionId));
     return result.rowCount >= 0; // Returns true even if 0 rows deleted (valid for empty sessions)
+  }
+  
+  async clearAllData(): Promise<boolean> {
+    try {
+      // Delete in proper order to respect foreign key constraints
+      await db.delete(stocktakeEntries);
+      await db.delete(stocktakeSessions);
+      await db.delete(items);
+      await db.delete(productGroups);
+      await db.delete(areas);
+      await db.delete(departments);
+      return true;
+    } catch (error) {
+      console.error('Error clearing all data:', error);
+      return false;
+    }
   }
 }
 

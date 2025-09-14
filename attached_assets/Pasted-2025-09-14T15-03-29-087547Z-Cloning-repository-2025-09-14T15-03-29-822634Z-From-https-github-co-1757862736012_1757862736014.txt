@@ -1,0 +1,41 @@
+2025-09-14T15:03:29.087547Z	Cloning repository...
+2025-09-14T15:03:29.822634Z	From https://github.com/hennesbam-design/stocktake-studio
+2025-09-14T15:03:29.823043Z	 * branch            7079be85bb9ca2cea9eb9266c70bab003a7272db -> FETCH_HEAD
+2025-09-14T15:03:29.823133Z	
+2025-09-14T15:03:29.859554Z	HEAD is now at 7079be8 Initial Stocktake Studio code
+2025-09-14T15:03:29.859967Z	
+2025-09-14T15:03:29.940183Z	
+2025-09-14T15:03:29.940636Z	Using v2 root directory strategy
+2025-09-14T15:03:29.961691Z	Success: Finished cloning repository files
+2025-09-14T15:03:32.426517Z	Checking for configuration in a Wrangler configuration file (BETA)
+2025-09-14T15:03:32.427585Z	
+2025-09-14T15:03:33.536423Z	No wrangler.toml file found. Continuing.
+2025-09-14T15:03:33.601229Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2025-09-14T15:03:33.601805Z	Installing project dependencies: npm clean-install --progress=false
+2025-09-14T15:03:36.435272Z	npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+2025-09-14T15:03:36.625681Z	npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+2025-09-14T15:03:36.72969Z	npm warn deprecated har-validator@5.1.5: this library is no longer supported
+2025-09-14T15:03:40.709053Z	
+2025-09-14T15:03:40.709374Z	added 437 packages, and audited 438 packages in 7s
+2025-09-14T15:03:40.709552Z	
+2025-09-14T15:03:40.709697Z	54 packages are looking for funding
+2025-09-14T15:03:40.709826Z	  run `npm fund` for details
+2025-09-14T15:03:40.714032Z	
+2025-09-14T15:03:40.71421Z	8 vulnerabilities (3 low, 3 moderate, 2 critical)
+2025-09-14T15:03:40.714337Z	
+2025-09-14T15:03:40.714439Z	To address issues that do not require attention, run:
+2025-09-14T15:03:40.714617Z	  npm audit fix
+2025-09-14T15:03:40.714708Z	
+2025-09-14T15:03:40.714769Z	To address all issues (including breaking changes), run:
+2025-09-14T15:03:40.714887Z	  npm audit fix --force
+2025-09-14T15:03:40.715Z	
+2025-09-14T15:03:40.7151Z	Run `npm audit` for details.
+2025-09-14T15:03:40.744716Z	Executing user command: npm run build
+2025-09-14T15:03:41.1234Z	
+2025-09-14T15:03:41.123726Z	> rest-express@1.0.0 build
+2025-09-14T15:03:41.123834Z	> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-09-14T15:03:41.124032Z	
+2025-09-14T15:03:41.132693Z	sh: 1: vite: not found
+2025-09-14T15:03:41.141239Z	Failed: Error while executing user command. Exited with error code: 127
+2025-09-14T15:03:41.150797Z	Failed: build command exited with code: 1
+2025-09-14T15:03:42.62556Z	Failed: error occurred while running build command

@@ -69,7 +69,8 @@ export const useStocktakeStore = create<StocktakeStore>((set, get) => ({
   setSelectedDepartment: (department) => set({ selectedDepartment: department }),
   setShowBarcodeScanner: (show) => set({ showBarcodeScanner: show }),
   setAdminPin: (pin) => {
-    localStorage.setItem('stocktake-admin-pin', pin);
+    // NOTE: Admin PIN is no longer stored in localStorage for security
+    // PIN is only kept in memory during the session
     set({ adminPin: pin });
   },
   

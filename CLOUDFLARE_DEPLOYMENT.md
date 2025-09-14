@@ -40,9 +40,11 @@ VITE_API_BASE_URL=https://your-backend-url.com
 
 ### 2.2 Configure Build Settings
 **Framework preset:** None (or Custom)
-**Build command:** `npm run build`
+**Build command:** `npx vite build`
 **Build output directory:** `dist/public`
 **Root directory:** (leave empty)
+
+> **Important:** Use `npx vite build` instead of `npm run build`. The npm script tries to build both frontend and backend, but Cloudflare Pages only needs the frontend.
 
 ### 2.3 Set Environment Variables
 In the Cloudflare Pages project settings, add:

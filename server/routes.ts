@@ -219,6 +219,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Clear all data endpoint (requires admin authorization)
+  app.post("/api/admin/clear-all", async (req, res) => {
+    try {
+      const { adminPin } = req.body;
+      
+      // Get server-side admin PIN from environment (fallback to SESSION_SECRET)
+      const serverAdminPin = process.env.ADMIN_PIN || process.env.SESSION_SECRET;
+      
+      if (!adminPin) {
+        return res.status(401).json({ error: "Admin PIN required" });
+      }
+      
+      // Validate PIN against server secret
+      if (adminPin !== serverAdminPin) {
+        return res.status(401).json({ error: "Invalid admin PIN" });
+      }
+      
+      const success = await storage.clearAllData();
+      res.json({ success });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to clear all data" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
