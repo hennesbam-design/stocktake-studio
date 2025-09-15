@@ -1,16 +1,23 @@
 {
-  "name": "rest-express",
+  "name": "stocktake-studio-monorepo",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev api/index.ts",
-    "build": "tsc --project tsconfig.json",
-    "api:build": "tsc --project tsconfig.api.json",
-    "start": "node dist/api/index.js",
+    "dev": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=client",
+    "client:dev": "npm run dev --workspace=client",
+    "client:build": "npm run build --workspace=client",
+    "api:build": "echo 'No build needed for Vercel serverless api'",
     "check": "tsc",
     "db:push": "drizzle-kit push"
   },
+  "private": true,
+  "workspaces": [
+    "client",
+    "api",
+    "shared"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
