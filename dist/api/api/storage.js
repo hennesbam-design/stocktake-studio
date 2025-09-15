@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
-import { db } from "./db";
-import { departments, areas, productGroups, items, stocktakeSessions, stocktakeEntries } from "../shared/schema";
+import { db } from "./db.js";
+import { departments, areas, productGroups, items, stocktakeSessions, stocktakeEntries } from "../shared/schema.js";
 export class DbStorage {
     // Departments
     async getDepartments() {

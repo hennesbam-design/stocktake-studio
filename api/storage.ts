@@ -12,10 +12,10 @@ import {
   type InsertStocktakeSession,
   type StocktakeEntry,
   type InsertStocktakeEntry
-} from "../shared/schema";
+} from "../shared/schema.js";
 import { eq } from "drizzle-orm";
-import { db } from "./db";
-import { departments, areas, productGroups, items, stocktakeSessions, stocktakeEntries } from "../shared/schema";
+import { db } from "./db.js";
+import { departments, areas, productGroups, items, stocktakeSessions, stocktakeEntries } from "../shared/schema.js";
 
 export interface IStorage {
   // Departments

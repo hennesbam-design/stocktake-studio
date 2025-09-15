@@ -1,6 +1,6 @@
 import { createServer } from "http";
-import { storage } from "./storage";
-import { insertDepartmentSchema, insertAreaSchema, insertProductGroupSchema, insertItemSchema, insertStocktakeSessionSchema, insertStocktakeEntrySchema } from "../shared/schema";
+import { storage } from "./storage.js";
+import { insertDepartmentSchema, insertAreaSchema, insertProductGroupSchema, insertItemSchema, insertStocktakeSessionSchema, insertStocktakeEntrySchema } from "../shared/schema.js";
 export async function registerRoutes(app) {
     // Departments
     app.get("/api/departments", async (req, res) => {
