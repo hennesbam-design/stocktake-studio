@@ -4,8 +4,8 @@
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
-    "outDir": "dist/api",
-    "rootDir": ".",
+  "outDir": "dist/api",
+  "rootDir": "api",
     "noEmit": false,
     "module": "ESNext",
     "target": "ES2020",

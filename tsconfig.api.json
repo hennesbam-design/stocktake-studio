@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["api/**/*", "shared/**/*"],
+  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+  "compilerOptions": {
+    "outDir": "dist/api",
+    "rootDir": ".",
+    "noEmit": false,
+    "module": "ESNext",
+    "target": "ES2020"
+  }
+}
