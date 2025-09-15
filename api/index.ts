@@ -1,13 +1,7 @@
 import express from 'express';
 import { registerRoutes } from './routes.js';
 
-// Create an Express app
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// Legacy Express server removed. All endpoints are now individual files for Vercel serverless.
+// The Express app and routes have been eliminated.
 
-// Register all API routes
-registerRoutes(app);
-
-// Export app for Vercel
-export default app;
+// No longer exporting an Express app.

@@ -56,7 +56,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       res.status(500).json({ error: "Failed to create area" });
     }
-  });
+  // Legacy Express server removed. All endpoints are now individual files for Vercel serverless.
 
   // Product Groups
   app.get("/api/product-groups", async (req, res) => {
