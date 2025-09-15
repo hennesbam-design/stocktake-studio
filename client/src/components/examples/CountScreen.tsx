@@ -1,3 +1,14 @@
+const mockAreas: Area[] = [
+  { id: "a1", departmentId: "1", name: "Beverages" },
+  { id: "a2", departmentId: "1", name: "Computers" },
+];
+
+const mockGroups: ProductGroup[] = [
+  { id: "g1", areaId: "a1", name: "Soda" },
+  { id: "g2", areaId: "a1", name: "Juice" },
+  { id: "g3", areaId: "a2", name: "Headphones" },
+  { id: "g5", areaId: "a2", name: "Laptops" },
+];
 import { useState } from "react";
 import { CountScreen } from "../CountScreen";
 import type { Department, Area, ProductGroup, Item, StocktakeEntry } from "@shared/schema";
@@ -8,53 +19,60 @@ const mockDepartment: Department = {
   description: "TV, Audio, Computing & Gaming"
 };
 
-const mockAreas: Area[] = [
-  { id: "1", departmentId: "1", name: "Television" },
-  { id: "2", departmentId: "1", name: "Audio Equipment" },
-  { id: "3", departmentId: "1", name: "Computing" },
-];
-
-const mockGroups: ProductGroup[] = [
-  { id: "1", areaId: "1", name: "Smart TVs" },
-  { id: "2", areaId: "1", name: "Gaming Monitors" },
-  { id: "3", areaId: "2", name: "Headphones" },
-  { id: "4", areaId: "2", name: "Speakers" },
-  { id: "5", areaId: "3", name: "Laptops" },
-  { id: "6", areaId: "3", name: "Accessories" },
-];
-
 const mockItems: Item[] = [
   {
     id: "1",
-    name: "Samsung 55\" Smart TV",
+    name: "Coke 330ml",
     barcode: "1234567890123",
-    groupId: "1",
-    defaultFulls: 0,
-    defaultSingles: 1
+    groupId: "g1",
+    defaultFulls: 2,
+    defaultSingles: 1,
+    packVolume: null
   },
   {
-    id: "2", 
-    name: "LG OLED 65\" TV",
+    id: "2",
+    name: "Sprite 330ml",
     barcode: "2345678901234",
-    groupId: "1",
-    defaultFulls: 0,
-    defaultSingles: 1
+    groupId: "g1",
+    defaultFulls: 1,
+    defaultSingles: 1,
+    packVolume: null
   },
   {
     id: "3",
+    name: "Fanta 330ml",
+    barcode: "3456789012345",
+    groupId: "g2",
+    defaultFulls: 0,
+    defaultSingles: 0,
+    packVolume: null
+  },
+  {
+    id: "4",
+    name: "Pepsi 330ml",
+    barcode: "4567890123456",
+    groupId: "g2",
+    defaultFulls: 2,
+    defaultSingles: 1,
+    packVolume: null
+  },
+  {
+    id: "5",
     name: "Sony WH-1000XM4 Headphones",
     barcode: "3456789012345",
     groupId: "3",
     defaultFulls: 1,
-    defaultSingles: 0
+    defaultSingles: 0,
+    packVolume: null
   },
   {
-    id: "4",
+    id: "6",
     name: "Apple MacBook Pro 16\"",
-    barcode: "4567890123456", 
+    barcode: "4567890123456",
     groupId: "5",
     defaultFulls: 0,
-    defaultSingles: 1
+    defaultSingles: 1,
+    packVolume: null
   },
 ];
 
