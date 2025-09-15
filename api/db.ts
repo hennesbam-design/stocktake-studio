@@ -1,3 +1,4 @@
+// Trivial change: trigger Vercel redeploy
 import { drizzle } from "drizzle-orm/neon-http";
 import { neon } from "@neondatabase/serverless";
 
