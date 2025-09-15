@@ -1,5 +1,5 @@
 import express from 'express';
-import { registerRoutes } from '../server/routes';
+import { registerRoutes } from './routes';
 
 // Create an Express app
 const app = express();
